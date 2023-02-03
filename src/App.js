@@ -8,6 +8,18 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+<Container className="p-3">
+    <Container className="p-5 mb-4 bg-light rounded-3">
+      <h1 className="header">Welcome To React-Bootstrap</h1>
+      <ExampleToast>
+        We now have Toasts
+        <span role="img" aria-label="tada">
+          🎉
+        </span>
+      </ExampleToast>
+    </Container>
+  </Container>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
