@@ -5,6 +5,23 @@ import Button from 'react-bootstrap/Button';
 import logo from './logo.svg';
 import './App.css';
 
+
+
+return (
+    <>
+      {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
+      <Toast show={show} onClose={() => toggleShow(false)}>
+        <Toast.Header>
+          <strong className="mr-auto">React-Bootstrap</strong>
+        </Toast.Header>
+        <Toast.Body>{children}</Toast.Body>
+      </Toast>
+    </>
+  );
+};
+
+
+
 function App() {
   return (
     <div className="App">
