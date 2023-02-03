@@ -5,6 +5,9 @@ import Button from 'react-bootstrap/Button';
 import logo from './logo.svg';
 import './App.css';
 
+const ExampleToast = ({ children }) => {
+  const [show, toggleShow] = useState(true);
+
 
 
 return (
