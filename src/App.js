@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BasicExample from ./BasicExample.js
+import BasicExample from './BasicExample.js'
 import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
