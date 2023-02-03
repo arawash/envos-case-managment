@@ -30,6 +30,7 @@ return (
 function App() {
   return (
     <div className="App">
+<BasicExample/>
 <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
       <h1 className="header">Welcome To React-Bootstrap</h1>
@@ -55,7 +56,7 @@ function App() {
         >
           Learn ReactJS 
         </a>
-<BasicExample/>
+
       </header>
     </div>
   );
