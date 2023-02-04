@@ -31,6 +31,7 @@ return (
 function App() {
   return (
     <div className="App">
+<FormGen/>
 <BasicExample/>
 <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
