@@ -1,3 +1,31 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+function FormGen() {
+
+
+
+
+
+
+
+  return (
+    <>
+{Form}
+</>
+  );
+}
+
+export default FormGen ;
+
+
+
+
+
+
+
 let DocketEntry = {
     additionalInfo: "string",
     addToCoversheet: true,
@@ -258,4 +286,9 @@ const label = document.createElement('label');
     
     const form = createFormFromObject(TCase);
     document.body.appendChild(form);
+
+
+
+
+
 
