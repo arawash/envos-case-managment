@@ -3,7 +3,7 @@ function FormGen() {
 
   return (
     <>
-{Form}
+{form}
 </>
   );
 }
