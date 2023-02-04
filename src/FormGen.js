@@ -8,7 +8,7 @@ const node = document.createElement("li");
 const textnode = document.createTextNode("Water");
 node.appendChild(textnode);
 
-document.body.appendChild("node").innerHTML = "Hello JavaScript!";
+document.body.appendChild(node).innerHTML = "Hello JavaScript!";
 
 
         </script> 
