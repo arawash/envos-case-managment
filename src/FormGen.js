@@ -1,15 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function FormGen() {
-
-
-
-
-
-
 
   return (
     <>
@@ -223,10 +213,10 @@ document.body.appendChild(form);
        
        
        function iterate(obj, stack) {
-const label = document.createElement('label');
+
     
     for (var prop in obj) {
-        
+        const label = document.createElement('label');
         if (obj.hasOwnProperty(prop)) {
             if (typeof obj[prop] == "object") {
                 iterate(obj[prop], stack)
