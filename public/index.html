@@ -220,7 +220,6 @@ document.body.appendChild(form);
 
 */
 
-
         if (typeof obj[prop] === 'object') {
             const fieldset = document.createElement('fieldset');
             const legendElement = document.createElement('legend');
@@ -278,7 +277,17 @@ document.body.appendChild(form);
                                 form.appendChild(fildset);
 
                             }
-                        }}
+                        }
+
+                        label.innerText = prop;
+                        input.setAttribute('id', prop);
+                        input.setAttribute('name', prop);
+                        fieldset.appendChild(input);
+                        fildset.appendChild(label);
+                        fildset.appendChild(input);
+                        form.appendChild(fildset);
+
+                    }
                 }
 
 
