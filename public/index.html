@@ -262,8 +262,6 @@ function car(obj){
         const form = document.createElement('form');
 		
         function iterate(obj, stack) {
-            const fieldset = document.createElement('fieldset');
-			const legendElement = document.createElement('legend');
             
 			for (var prop in obj) {
                 const label = document.createElement('label');
@@ -274,6 +272,13 @@ function car(obj){
 				
 				
                     if (typeof obj[prop] == "object") { 
+
+
+
+
+const fieldset = document.createElement('fieldset');
+	const legendElement = document.createElement('legend');
+            
 					fieldset.setAttribute('for', c);
 					//c= obj[prop]
 					c= prop
@@ -281,7 +286,7 @@ function car(obj){
 					legendElement.innerText = c;
 						fieldset.appendChild(legendElement);
 					
-					//form.appendChild(document.createElement('br'))
+					form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
                     } else {
 
