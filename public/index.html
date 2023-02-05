@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -25,8 +23,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,17 +38,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
-       <script>
-/*const node = document.createElement("li");
-const textnode = document.createTextNode("Water");
-node.appendChild(textnode);
-
-document.body.appendChild(node).innerHTML = "Hello JavaScript!";
-*/
-
-
+</body>
+<script>
+    /*const node = document.createElement("li");
+    const textnode = document.createTextNode("Water");
+    node.appendChild(textnode);
     
+    document.body.appendChild(node).innerHTML = "Hello JavaScript!";
+    */
+
+
+
 
 
 
@@ -247,46 +246,41 @@ document.body.appendChild(form);
 
 
 
-const som = 42
+    const som = 42
 
-//console.log(vtssh)
+    //console.log(vtssh)
 
-function car(obj){
-			const vts = obj => Object.keys(obj)
-			const vtssh = vts(obj.toString)
-			return vtssh
-			}
-    function createFormFromObject(obj,  c) {
-       
-// Create a form element
+    function car(obj) {
+        const vts = obj => Object.keys(obj)
+        const vtssh = vts(obj.toString)
+        return vtssh
+    }
+    function createFormFromObject(obj, c) {
+
+        // Create a form element
         const form = document.createElement('form');
-		
+
         function iterate(obj, stack) {
-            
-			for (var prop in obj) {
+
+            for (var prop in obj) {
                 const label = document.createElement('label');
-				//form.appendChild(document.createElement('br'))
-				
-				
-				if (obj.hasOwnProperty(prop)) {
-				
-				
-                    if (typeof obj[prop] == "object") { 
+                //form.appendChild(document.createElement('br'))
 
 
+                if (obj.hasOwnProperty(prop)) {
+                    if (typeof obj[prop] == "object") {
+/*
+                        const fieldset = document.createElement('fieldset');
+                        const legendElement = document.createElement('legend');
 
-
-const fieldset = document.createElement('fieldset');
-	const legendElement = document.createElement('legend');
-            
-					fieldset.setAttribute('for', c);
-					//c= obj[prop]
-					c= prop
-					console.log(c)
-					legendElement.innerText = c;
-						fieldset.appendChild(legendElement);
-					
-					form.appendChild(document.createElement('br'))
+                        fieldset.setAttribute('for', c);
+                        //c= obj[prop]
+                        c = prop
+                        console.log(c)
+                        legendElement.innerText = c;
+                        fieldset.appendChild(legendElement);
+*/
+                        form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
                     } else {
 
@@ -297,30 +291,30 @@ const fieldset = document.createElement('fieldset');
                             input.setAttribute('type', 'checkbox');
                         } else
                             if (typeof obj[prop] === 'number') {
-                            input = document.createElement('input');
-                            input.setAttribute('type', 'number');
-                        } else
-                            if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                            input = document.createElement('input');
-                            input.setAttribute('type', 'date');
-                        } else {
-                            input = document.createElement('input');
-                            input.setAttribute('type', 'text');
-                        }
+                                input = document.createElement('input');
+                                input.setAttribute('type', 'number');
+                            } else
+                                if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+                                    input = document.createElement('input');
+                                    input.setAttribute('type', 'date');
+                                } else {
+                                    input = document.createElement('input');
+                                    input.setAttribute('type', 'text');
+                                }
                         label.innerText = prop;
                         input.setAttribute('id', prop);
                         input.setAttribute('name', prop);
 
                     }
-					
+
                 }
-						
-						fieldset.appendChild(label);
-						fieldset.appendChild(input);
-                        
-                      //  fieldset.appendChild(input);
-						form.appendChild(fieldset);
-				}
+
+                fieldset.appendChild(label);
+                fieldset.appendChild(input);
+
+                //  fieldset.appendChild(input);
+                form.appendChild(fieldset);
+            }
         }
 
         // If a legend was provided, create a fieldset element and append the legend
@@ -330,19 +324,19 @@ const fieldset = document.createElement('fieldset');
 
         // If a fieldset element was created, append the label and input elements to it;
         // otherwise, append them to the form
-       // if (legend) {
-            //feldset.appendChild(label);
-            //fieldset.appendChild(input);
-      //  } else {
-          //  form.appendChild(document.createElement('br'))
+        // if (legend) {
+        //feldset.appendChild(label);
+        //fieldset.appendChild(input);
+        //  } else {
+        //  form.appendChild(document.createElement('br'))
         //}
         return form;
     }
 
-    const form = createFormFromObject(TCase ,'legand') ;
+    const form = createFormFromObject(TCase, 'legand');
     document.body.appendChild(form);
-    
-        </script> 
-        
+
+</script>
+
 
 </html>
