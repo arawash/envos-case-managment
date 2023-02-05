@@ -254,10 +254,10 @@ document.body.appendChild(form);
 
             for (var prop in obj) {
                 const label = document.createElement('label');form.appendChild(document.createElement('br'))
-               
-const fieldset = document.createElement('fieldset');
+               const fieldset = document.createElement('fieldset');
                 const legendElement = document.createElement('legend');
-                legendElement.innerText = legend; if (obj.hasOwnProperty(prop)) {
+                legendElement.innerText = legend; 
+if (obj.hasOwnProperty(prop)) {
                     if (typeof obj[prop] == "object") { 
 form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
