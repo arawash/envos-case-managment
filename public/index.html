@@ -41,12 +41,12 @@
     -->
   </body>
        <script>
-const node = document.createElement("li");
+/*const node = document.createElement("li");
 const textnode = document.createTextNode("Water");
 node.appendChild(textnode);
 
 document.body.appendChild(node).innerHTML = "Hello JavaScript!";
-
+*/
 
 
     
@@ -244,22 +244,44 @@ document.body.appendChild(form);
 
 
 
-    function createFormFromObject(obj, legend) {
-        // Create a form element
+
+
+
+const som = 42
+
+//console.log(vtssh)
+
+function car(obj){
+			const vts = obj => Object.keys(obj)
+			const vtssh = vts(obj.toString)
+			return vtssh
+			}
+    function createFormFromObject(obj,  c) {
+       
+// Create a form element
         const form = document.createElement('form');
-
-
+		
         function iterate(obj, stack) {
-
-
-            for (var prop in obj) {
-                const label = document.createElement('label');form.appendChild(document.createElement('br'))
-               const fieldset = document.createElement('fieldset');
-                const legendElement = document.createElement('legend');
-                legendElement.innerText = legend; 
-if (obj.hasOwnProperty(prop)) {
+            const fieldset = document.createElement('fieldset');
+			const legendElement = document.createElement('legend');
+            fieldset.setAttribute('for', c);
+					//c= obj[prop]
+					c= prop
+					console.log(c)
+					legendElement.innerText = c;
+						fieldset.appendChild(legendElement);
+			for (var prop in obj) {
+                const label = document.createElement('label');
+				//form.appendChild(document.createElement('br'))
+				
+				
+				if (obj.hasOwnProperty(prop)) {
+				
+				`
                     if (typeof obj[prop] == "object") { 
-form.appendChild(document.createElement('br'))
+					
+					
+					//form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
                     } else {
 
@@ -283,17 +305,18 @@ form.appendChild(document.createElement('br'))
                         label.innerText = prop;
                         input.setAttribute('id', prop);
                         input.setAttribute('name', prop);
-                         fieldset.appendChild(input);
-                        fildset.appendChild(label);
-                        fildset.appendChild(input);
-form.appendChild(fildset);
 
                     }
-                }}
+					
+                }
+						
+						fieldset.appendChild(label);
+						fieldset.appendChild(input);
+                        
+                      //  fieldset.appendChild(input);
+						form.appendChild(fieldset);
+				}
         }
-
-
-
 
         // If a legend was provided, create a fieldset element and append the legend
         //if (legend) {}
@@ -302,20 +325,14 @@ form.appendChild(fildset);
 
         // If a fieldset element was created, append the label and input elements to it;
         // otherwise, append them to the form
-        if (legend) {
+       // if (legend) {
             //feldset.appendChild(label);
             //fieldset.appendChild(input);
-        } else {
-            form.appendChild(document.createElement('br'))
-
-
-        }
+      //  } else {
+          //  form.appendChild(document.createElement('br'))
+        //}
         return form;
     }
-
-
-
-
 
     const form = createFormFromObject(TCase ,'legand') ;
     document.body.appendChild(form);
