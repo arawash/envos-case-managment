@@ -253,9 +253,10 @@ document.body.appendChild(form);
 
 
             for (var prop in obj) {
-                const label = document.createElement('label');
+                const label = document.createElement('label');form.appendChild(document.createElement('br'))
                 if (obj.hasOwnProperty(prop)) {
-                    if (typeof obj[prop] == "object") {
+                    if (typeof obj[prop] == "object") { 
+form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
                     } else {
 
@@ -282,6 +283,7 @@ document.body.appendChild(form);
                         //    fieldset.appendChild(input);
                         form.appendChild(label);
                         form.appendChild(input);
+
                     }
                 }}
         }
