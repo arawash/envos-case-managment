@@ -254,7 +254,10 @@ document.body.appendChild(form);
 
             for (var prop in obj) {
                 const label = document.createElement('label');form.appendChild(document.createElement('br'))
-                if (obj.hasOwnProperty(prop)) {
+               
+const fieldset = document.createElement('fieldset');
+                const legendElement = document.createElement('legend');
+                legendElement.innerText = legend; if (obj.hasOwnProperty(prop)) {
                     if (typeof obj[prop] == "object") { 
 form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
@@ -280,9 +283,10 @@ form.appendChild(document.createElement('br'))
                         label.innerText = prop;
                         input.setAttribute('id', prop);
                         input.setAttribute('name', prop);
-                        //    fieldset.appendChild(input);
-                        form.appendChild(label);
-                        form.appendChild(input);
+                         fieldset.appendChild(input);
+                        fildset.appendChild(label);
+                        fildset.appendChild(input);
+form appendChild(fildset);
 
                     }
                 }}
@@ -313,7 +317,7 @@ form.appendChild(document.createElement('br'))
 
 
 
-    const form = createFormFromObject(TCase);
+    const form = createFormFromObject(TCase ,'legand') ;
     document.body.appendChild(form);
     
         </script> 
