@@ -270,19 +270,15 @@ document.body.appendChild(form);
         }
 
     }
-    function createFormFromObject(obj, legend) {
+    
+    function createFormFromObject(TCase, legend) {
         // Create a form element
         const form = document.createElement('form');
         //  const fieldset = document.createElement('fieldset');
         //   const legendElement = document.createElement('legend');
         iterate(obj, "      ")
-
-
-
         return form;
     }
-
-
     const form = createFormFromObject(TCase, 'legand');
     document.body.appendChild(form);
 
