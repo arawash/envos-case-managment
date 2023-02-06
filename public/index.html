@@ -239,8 +239,8 @@ document.body.appendChild(form);
         // Create a form element
         const form = document.createElement('form');
         const label = document.createElement('label');
-        const fieldset = document.createElement('fieldset');
-        const legendElement = document.createElement('legend');
+      //  const fieldset = document.createElement('fieldset');
+    //   const legendElement = document.createElement('legend');
         function iterate(obj, stack) {
 
 
@@ -275,9 +275,9 @@ document.body.appendChild(form);
                         label.innerText = prop;
                         input.setAttribute('id', prop);
                         input.setAttribute('name', prop);
-                        fieldset.appendChild(input);
-                        fildset.appendChild(label);
-                        fildset.appendChild(input);
+                       // fieldset.appendChild(input);
+                        //fildset.appendChild(label);
+                        //fildset.appendChild(input);
                         form.appendChild(fildset);
 
                     }
