@@ -235,10 +235,11 @@ document.body.appendChild(form);
     */
     function iterate(obj, stack) {
         //      legendElement.innerText = legend;
-        const label = document.createElement('label');
+        
 
         for (var prop in obj) {
             if (obj.hasOwnProperty(prop)) {
+const label = document.createElement('label');
                 if (typeof obj[prop] == "object") {
                     // form.appendChild(document.createElement('br'))
                     iterate(obj[prop], stack)
@@ -265,10 +266,10 @@ document.body.appendChild(form);
                     //fildset.appendChild(input);
                     //form.appendChild(fildset);
                     }
+
+            }
 form.appendChild(label);
                     form.appendChhild(input);
-            }
-
         }
 
 
