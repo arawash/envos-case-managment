@@ -233,91 +233,55 @@ document.body.appendChild(form);
                 //    feldset.appendChild(label);
                 
     */
-
-
-    function createFormFromObject(obj, legend) {
-        // Create a form element
-        const form = document.createElement('form');
-        const label = document.createElement('label');
-      //  const fieldset = document.createElement('fieldset');
-    //   const legendElement = document.createElement('legend');
-        function iterate(obj, stack) {
-
-
-            //      legendElement.innerText = legend;
-
+    function iterate(obj, stack) {
+        //      legendElement.innerText = legend;
+            const label = document.createElement('label');
             for (var prop in obj) {
-
                 if (obj.hasOwnProperty(prop)) {
                     if (typeof obj[prop] == "object") {
                         // form.appendChild(document.createElement('br'))
                         iterate(obj[prop], stack)
                     } else {
-
                         label.setAttribute('for', prop);
                         // Create an input element based on the data type of the property let input;
-                        input = document.createElement('input'); i
+                        input = document.createElement('input'); 
                         if (typeof obj[prop] === 'boolean') {
-
                             input.setAttribute('type', 'checkbox');
                         } else
                             if (typeof obj[prop] === 'number') {
-                                
                                 input.setAttribute('type', 'number');
                             } else
                                 if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                                    
                                     input.setAttribute('type', 'date');
                                 } else {
-                                
                                     input.setAttribute('type', 'text');
                                 }
                         label.innerText = prop;
                         input.setAttribute('id', prop);
                         input.setAttribute('name', prop);
-                       // fieldset.appendChild(input);
+                        
+                        // fieldset.appendChild(input);
                         //fildset.appendChild(label);
                         //fildset.appendChild(input);
-                        form.appendChild(fildset);
+                        //form.appendChild(fildset);
 
                     }
                 }
 
-                label.innerText = prop;
-                input.setAttribute('id', prop);
-                input.setAttribute('name', prop);
-                fieldset.appendChild(input);
-                fildset.appendChild(label);
-                fildset.appendChild(input);
-                form.appendChild(fildset);
-
             }
-            
 
+        }
+        function createFormFromObject(obj, legend) {
+            // Create a form element
+            const form = document.createElement('form');
+            //  const fieldset = document.createElement('fieldset');
+            //   const legendElement = document.createElement('legend');
+    iterate(obj, "      ")
+    
 
-
-
-        // If a legend was provided, create a fieldset element and append the legend
-        //if (legend) {}
-        // Iterate through the properties of the object
-        iterate(obj, "      ")
-
-        // If a fieldset element was created, append the label and input elements to it;
-        // otherwise, append them to the form
-        //     if (legend) {
-        //feldset.appendChild(label);
-        //fieldset.appendChild(input);
-        //   } else {
-        //     form.appendChild(document.createElement('br'))
-
-
-
+        
+        return form;
     }
-    return form;
-    }
-
-
-
 
 
     const form = createFormFromObject(TCase, 'legand');
