@@ -235,51 +235,50 @@ document.body.appendChild(form);
     */
     function iterate(obj, stack) {
         //      legendElement.innerText = legend;
-            const label = document.createElement('label');
-            for (var prop in obj) {
-                if (obj.hasOwnProperty(prop)) {
-                    if (typeof obj[prop] == "object") {
-                        // form.appendChild(document.createElement('br'))
-                        iterate(obj[prop], stack)
+        const label = document.createElement('label');
+        label.innerText = prop;
+
+        for (var prop in obj) {
+            if (obj.hasOwnProperty(prop)) {
+                if (typeof obj[prop] == "object") {
+                    // form.appendChild(document.createElement('br'))
+                    iterate(obj[prop], stack)
+                } else {
+                    label.setAttribute('for', prop);
+                    // Create an input element based on the data type of the property let input;
+                    input = document.createElement('input');
+                    if (typeof obj[prop] === 'boolean') {
+                        input.setAttribute('type', 'checkbox');
+                    } else if (typeof obj[prop] === 'number') {
+                        input.setAttribute('type', 'number');
+                    } else if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+                        input.setAttribute('type', 'date');
                     } else {
-                        label.setAttribute('for', prop);
-                        // Create an input element based on the data type of the property let input;
-                        input = document.createElement('input'); 
-                        if (typeof obj[prop] === 'boolean') {
-                            input.setAttribute('type', 'checkbox');
-                        } else
-                            if (typeof obj[prop] === 'number') {
-                                input.setAttribute('type', 'number');
-                            } else
-                                if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                                    input.setAttribute('type', 'date');
-                                } else {
-                                    input.setAttribute('type', 'text');
-                                }
-                        label.innerText = prop;
-                        input.setAttribute('id', prop);
-                        input.setAttribute('name', prop);
-                        
-                        // fieldset.appendChild(input);
-                        //fildset.appendChild(label);
-                        //fildset.appendChild(input);
-                        //form.appendChild(fildset);
-
+                        input.setAttribute('type', 'text');
                     }
-                }
-
+                    input.setAttribute('id', prop);
+                    input.setAttribute('name', prop);
+                    form.appendChild(label);
+                    form.appendChhild(innpu);
+                    // fieldset.appendChild(input);
+                    //fildset.appendChild(label);
+                    //fildset.appendChild(input);
+                    //form.appendChild(fildset);
+                    }
             }
 
         }
-        function createFormFromObject(obj, legend) {
-            // Create a form element
-            const form = document.createElement('form');
-            //  const fieldset = document.createElement('fieldset');
-            //   const legendElement = document.createElement('legend');
-    iterate(obj, "      ")
-    
 
-        
+    }
+    function createFormFromObject(obj, legend) {
+        // Create a form element
+        const form = document.createElement('form');
+        //  const fieldset = document.createElement('fieldset');
+        //   const legendElement = document.createElement('legend');
+        iterate(obj, "      ")
+
+
+
         return form;
     }
 
