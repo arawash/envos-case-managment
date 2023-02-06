@@ -239,21 +239,14 @@ document.body.appendChild(form);
 
         for (var prop in obj) {
             if (obj.hasOwnProperty(prop)) {
-const label = document.createElement('label');
+const label = document.createElement('label'); 
+form.appendChild(label);
                 if (typeof obj[prop] == "object") {
                     // form.appendChild(document.createElement('br'))
                     iterate(obj[prop], stack)
                 } else {
                     label.setAttribute('for', prop);
-                    // Create an input element based on the data type of the property let input;
                     input = document.createElement('input');
-                    if (typeof obj[prop] === 'boolean') {
-                        input.setAttribute('type', 'checkbox');
-                    } else if (typeof obj[prop] === 'number') {
-                        input.setAttribute('type', 'number');
-                    } else if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                        input.setAttribute('type', 'date');
-                    } else {
                         input.setAttribute('type', 'text');
                     }
                             label.innerText = prop;
@@ -261,16 +254,12 @@ const label = document.createElement('label');
                     input.setAttribute('id', prop);
                     input.setAttribute('name', prop);
                     
-                    // fieldset.appendChild(input);
-                    //fildset.appendChild(label);
-                    //fildset.appendChild(input);
-                    //form.appendChild(fildset);
+    form.appendChild(label);
+                    form.appendChhild(input);
                     }
 
             }
-form.appendChild(label);
-                    form.appendChhild(input);
-        }
+
 
 
    
