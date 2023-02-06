@@ -203,7 +203,7 @@
             // If a fieldset element was created, append the label and input elements to it;
             // otherwise, append them to the form
             if (legend) {
-                //feldset.appendChild(label);
+        p //feldset.appendChild(label);
                 //fieldset.appendChild(input);
             } else {
                 form.appendChild(document.createElement('br'))
@@ -236,7 +236,6 @@ document.body.appendChild(form);
     function iterate(obj, stack) {
         //      legendElement.innerText = legend;
         const label = document.createElement('label');
-        label.innerText = prop;
 
         for (var prop in obj) {
             if (obj.hasOwnProperty(prop)) {
@@ -256,10 +255,12 @@ document.body.appendChild(form);
                     } else {
                         input.setAttribute('type', 'text');
                     }
+                            label.innerText = prop;
+
                     input.setAttribute('id', prop);
                     input.setAttribute('name', prop);
                     form.appendChild(label);
-                    form.appendChhild(innpu);
+                    form.appendChhild(input);
                     // fieldset.appendChild(input);
                     //fildset.appendChild(label);
                     //fildset.appendChild(input);
