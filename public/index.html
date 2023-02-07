@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -23,9 +25,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,17 +41,57 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-</body>
-<script>
+  </body>
+  <script>
     const node = document.createElement("li");
     const textnode = document.createTextNode("Water");
     node.appendChild(textnode);
 
     document.body.appendChild(node).innerHTML = "Hello JavaScript!";
 
-
-
     let DocketEntry = {
+      additionalInfo: "string",
+      addToCoversheet: true,
+      caseCaption: "string",
+      certificateOfService: "string",
+      createdAt: "string",
+      descriptionDisplay: "string",
+      docketEntryId: "string",
+      docketNumber: "string",
+      documentTitle: "string",
+      documentconst: "string",
+      eventCode: "string",
+      filedBy: "string",
+      filingDate: "string",
+      index: Number,
+      isFileAttached: true,
+      isPaper: "string",
+      lodged: true,
+      mailingDate: "string",
+      otherFilingParty: "string",
+      editState: {
+        object: "object",
+      },
+      isLegacyServed: true,
+      processingStatus: "string",
+      pk: "string",
+      receivedAt: "string",
+      sentBy: "string",
+      servedAt: "string",
+      sk: "string",
+      userId: "string",
+    };
+
+    let TCase = {
+      associatedJudge: "string",
+      automaticBlocked: "string",
+      automaticBlockedDate: "string",
+      automaticBlockedReason: "string",
+      blocked: "string",
+      isSealed: true,
+      blockedDate: "string",
+      blockedReason: "string",
+      docketEntries: {
         additionalInfo: "string",
         addToCoversheet: true,
         caseCaption: "string",
@@ -70,7 +112,7 @@
         mailingDate: "string",
         otherFilingParty: "string",
         editState: {
-            object: "object"
+          object: "object",
         },
         isLegacyServed: true,
         processingStatus: "string",
@@ -79,172 +121,106 @@
         sentBy: "string",
         servedAt: "string",
         sk: "string",
-        userId: "string"
-    }
-
-
-    let TCase = {
-        associatedJudge: "string",
-        automaticBlocked: "string",
-        automaticBlockedDate: "string",
-        automaticBlockedReason: "string",
-        blocked: "string",
-        isSealed: true,
-        blockedDate: "string",
-        blockedReason: "string",
-        docketEntries: {
-            additionalInfo: "string",
-            addToCoversheet: true,
-            caseCaption: "string",
-            certificateOfService: "string",
-            createdAt: "string",
-            descriptionDisplay: "string",
-            docketEntryId: "string",
-            docketNumber: "string",
-            documentTitle: "string",
-            documentconst: "string",
-            eventCode: "string",
-            filedBy: "string",
-            filingDate: "string",
-            index: Number,
-            isFileAttached: true,
-            isPaper: "string",
-            lodged: true,
-            mailingDate: "string",
-            otherFilingParty: "string",
-            editState: {
-                object: "object"
-            },
-            isLegacyServed: true,
-            processingStatus: "string",
-            pk: "string",
-            receivedAt: "string",
-            sentBy: "string",
-            servedAt: "string",
-            sk: "string",
-            userId: "string"
-        },
-        // [],
-        canAllowDocumentService: "string",
-        caseTitle: "string",
-        canAllowPrintableDocketRecord: "string",
-        caseCaption: "string",
-        caseNote: "string",
-        caseconst: "string",
-        closedDate: "string",
-        hearings: {
-            trialSessionId: "string",
-        },
-        // l[],
-        createdAt: "string",
-        damages: "string",
-        docketNumber: "string",
-        docketNumberSuffix: "string",
-        docketNumberWithSuffix: "string",
-        entityName: "string",
-        filingconst: "string",
-        hasPendingItems: true,
-        hasVerifiedIrsNotice: "string",
-        highPriority: "string",
-        highPriorityReason: "string",
-        initialCaption: "string",
-        initialDocketNumberSuffix: "string",
-        irsNoticeDate: "string",
-        isPaper: "string",
-        judgeUserId: "string",
-        leadDocketNumber: "string",
-        litigationCosts: "string",
-        mailingDate: "string",
-        noticeOfAttachments: "string",
-        noticeOfTrialDate: "string",
-        orderDesignatingPlaceOfTrial: true,
-        orderForAmendedPetition: true,
-        orderForAmendedPetitionAndFilingFee: true,
-        orderForFilingFee: true,
-        orderForOds: true,
-        orderForRatification: true,
-        orderToShowCause: true,
-        partyconst: "string",
-        petitionPaymentDate: "string",
-        petitionPaymentMethod: "string",
-        petitionPaymentStatus: "string",
-        petitionPaymentWaivedDate: "string",
-        preferredTrialCity: "string",
-        procedureconst: "string",
-        qcCompleteForTrial: "string",
-        receivedAt: "string",
-        sealedDate: "string",
-        sortableDocketNumber: "string",
-        status: "string",
-        trialDate: "string",
-        trialLocation: "string",
+        userId: "string",
+      },
+      // [],
+      canAllowDocumentService: "string",
+      caseTitle: "string",
+      canAllowPrintableDocketRecord: "string",
+      caseCaption: "string",
+      caseNote: "string",
+      caseconst: "string",
+      closedDate: "string",
+      hearings: {
         trialSessionId: "string",
-        trialTime: "string",
-        useSameAsPrimary: "string",
-        //petitioners: TPetitioner,
-        // [],
-        isUserIdRepresentedByPrivatePractitioner: "ANY",
-    }
+      },
+      // l[],
+      createdAt: "string",
+      damages: "string",
+      docketNumber: "string",
+      docketNumberSuffix: "string",
+      docketNumberWithSuffix: "string",
+      entityName: "string",
+      filingconst: "string",
+      hasPendingItems: true,
+      hasVerifiedIrsNotice: "string",
+      highPriority: "string",
+      highPriorityReason: "string",
+      initialCaption: "string",
+      initialDocketNumberSuffix: "string",
+      irsNoticeDate: "string",
+      isPaper: "string",
+      judgeUserId: "string",
+      leadDocketNumber: "string",
+      litigationCosts: "string",
+      mailingDate: "string",
+      noticeOfAttachments: "string",
+      noticeOfTrialDate: "string",
+      orderDesignatingPlaceOfTrial: true,
+      orderForAmendedPetition: true,
+      orderForAmendedPetitionAndFilingFee: true,
+      orderForFilingFee: true,
+      orderForOds: true,
+      orderForRatification: true,
+      orderToShowCause: true,
+      partyconst: "string",
+      petitionPaymentDate: "string",
+      petitionPaymentMethod: "string",
+      petitionPaymentStatus: "string",
+      petitionPaymentWaivedDate: "string",
+      preferredTrialCity: "string",
+      procedureconst: "string",
+      qcCompleteForTrial: "string",
+      receivedAt: "string",
+      sealedDate: "string",
+      sortableDocketNumber: "string",
+      status: "string",
+      trialDate: "string",
+      trialLocation: "string",
+      trialSessionId: "string",
+      trialTime: "string",
+      useSameAsPrimary: "string",
+      //petitioners: TPetitioner,
+      // [],
+      isUserIdRepresentedByPrivatePractitioner: "ANY",
+    };
     /*  */
     function createFormFromObject(obj) {
-    // Create a form element
-    const form = document.createElement('form');
-    // If a legend was provided, create a fieldset element and append the legend
-    // Iterate through the properties of the object
-    for (const prop in obj) {
+      // Create a form element
+      const form = document.createElement("form");
+      // If a legend was provided, create a fieldset element and append the legend
+      // Iterate through the properties of the object
+      for (const prop in obj) {
         // Ignore inherited properties
         if (obj.hasOwnProperty(prop)) {
-            // Create a label element
-            const label = document.createElement('label');
-            label.setAttribute('for', prop);
-            label.innerText = prop;
-            // Create an input element based on the data type of the property let input;
-            if (typeof obj[prop] === 'boolean') {
-                input = document.createElement('input');
-                input.setAttribute('type', 'checkbox');
-            } else
-                if (typeof obj[prop] === 'number') {
-                input = document.createElement('input');
-                input.setAttribute('type', 'number');
-            } else
-                if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                input = document.createElement('input');
-                input.setAttribute('type', 'date');
-            } else
-                if (typeof obj[prop] === 'object') {
-               // const fieldset = document.createElement('fieldset');
-              //  const legendElement = document.createElement('legend');
-              //  legendElement.innerText = legend;
-               // fieldset.appendChild(legendElement);
-                // If the property is an object, recursively create a form for it
-                createFormFromObject(obj[prop], prop);
-              //  input.setAttribute('id', prop);
-              //  input.setAttribute('name', prop);
-               // form.appendChild(fieldset);
-               // feldset.appendChild(label);
-              //  fieldset.appendChild(input);
-            } else {
-                input = document.createElement('input');
-                input.setAttribute('type', 'text');
-            }
-            input.setAttribute('id', prop);
-            input.setAttribute('name', prop);
-            // If a fieldset element was created, append the label and input elements to it;
-            // otherwise, append them to the form
-            if (legend) {
-                //feldset.appendChild(label);
-                //fieldset.appendChild(input);
-            } else {
-                form.appendChild(label);
-                form.appendChild(input);
-            }
+          // Create a label element
+          const label = document.createElement("label");
+          label.setAttribute("for", prop);
+          label.innerText = prop;
+          // Create an input element based on the data type of the property let input;
+
+          if (typeof obj[prop] === "object") {
+            // const fieldset = document.createElement('fieldset');
+            //  const legendElement = document.createElement('legend');
+            //  legendElement.innerText = legend;
+            // fieldset.appendChild(legendElement);
+            // If the property is an object, recursively create a form for it
+            createFormFromObject(obj[prop], prop);
+          } else {
+            input = document.createElement("input");
+            input.setAttribute("type", "text");
+
+            input.setAttribute("id", prop);
+            input.setAttribute("name", prop);
+
+            form.appendChild(label);
+            form.appendChild(input);
+          }
         }
+      }
+      return form;
     }
-    return form;
-}
-const form = createFormFromObject(TCase);
-document.body.appendChild(form);
-</script>
-
-
+    const form = createFormFromObject(TCase);
+    document.body.appendChild(form);
+  </script>
 </html>
