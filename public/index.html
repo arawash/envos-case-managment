@@ -186,11 +186,10 @@
         isUserIdRepresentedByPrivatePractitioner: "ANY",
     }
     /*  */
-    function createFormFromObject(obj, legend) {
+    function createFormFromObject(obj) {
     // Create a form element
     const form = document.createElement('form');
     // If a legend was provided, create a fieldset element and append the legend
-    if (legend) {}
     // Iterate through the properties of the object
     for (const prop in obj) {
         // Ignore inherited properties
@@ -213,17 +212,17 @@
                 input.setAttribute('type', 'date');
             } else
                 if (typeof obj[prop] === 'object') {
-                const fieldset = document.createElement('fieldset');
-                const legendElement = document.createElement('legend');
-                legendElement.innerText = legend;
-                fieldset.appendChild(legendElement);
+               // const fieldset = document.createElement('fieldset');
+              //  const legendElement = document.createElement('legend');
+              //  legendElement.innerText = legend;
+               // fieldset.appendChild(legendElement);
                 // If the property is an object, recursively create a form for it
-                input = createFormFromObject(obj[prop], prop);
-                input.setAttribute('id', prop);
-                input.setAttribute('name', prop);
-                form.appendChild(fieldset);
-                feldset.appendChild(label);
-                fieldset.appendChild(input);
+                i createFormFromObject(obj[prop], prop);
+              //  input.setAttribute('id', prop);
+              //  input.setAttribute('name', prop);
+               // form.appendChild(fieldset);
+               // feldset.appendChild(label);
+              //  fieldset.appendChild(input);
             } else {
                 input = document.createElement('input');
                 input.setAttribute('type', 'text');
@@ -236,7 +235,6 @@
                 //feldset.appendChild(label);
                 //fieldset.appendChild(input);
             } else {
-                form.appendChild(document.createElement('br'))
                 form.appendChild(label);
                 form.appendChild(input);
             }
