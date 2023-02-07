@@ -194,11 +194,7 @@
         // Ignore inherited properties
         if (obj.hasOwnProperty(prop)) {
           // Create a label element
-          const label = document.createElement("label");
-          label.setAttribute("for", prop);
-          label.innerText = prop;
-          // Create an input element based on the data type of the property let input;
-
+          
           if (typeof obj[prop] === "object") {
             // const fieldset = document.createElement('fieldset');
             //  const legendElement = document.createElement('legend');
@@ -206,13 +202,17 @@
             // fieldset.appendChild(legendElement);
             // If the property is an object, recursively create a form for it
             createFormFromObject(obj[prop], prop);
-          } else {
+          } else
+ {
+    const label = document.createElement("label");
+              label.setAttribute("for", prop);
+                        label.innerText = prop;
+                                  // Create an input element based on the data type of the property let input;
+                                  
             input = document.createElement("input");
             input.setAttribute("type", "text");
-
             input.setAttribute("id", prop);
             input.setAttribute("name", prop);
-
             form.appendChild(label);
             form.appendChild(input);
           }
