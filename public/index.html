@@ -186,24 +186,54 @@
         isUserIdRepresentedByPrivatePractitioner: "ANY",
     }
     /*  */
-
-
-    //function createFormFromObject(obj, legend) {
+    function createFormFromObject(obj, legend) {
     // Create a form element
-    //   const form = document.createElement('form');
+    const form = document.createElement('form');
     // If a legend was provided, create a fieldset element and append the legend
-    //   if (legend) {}
+    if (legend) {}
     // Iterate through the properties of the object
-    /*   for (const prop in obj) {
+    for (const prop in obj) {
         // Ignore inherited properties
         if (obj.hasOwnProperty(prop)) {
             // Create a label element
             const label = document.createElement('label');
-
+            label.setAttribute('for', prop);
+            label.innerText = prop;
+            // Create an input element based on the data type of the property let input;
+            if (typeof obj[prop] === 'boolean') {
+                input = document.createElement('input');
+                input.setAttribute('type', 'checkbox');
+            } else
+                if (typeof obj[prop] === 'number') {
+                input = document.createElement('input');
+                input.setAttribute('type', 'number');
+            } else
+                if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+                input = document.createElement('input');
+                input.setAttribute('type', 'date');
+            } else
+                if (typeof obj[prop] === 'object') {
+                const fieldset = document.createElement('fieldset');
+                const legendElement = document.createElement('legend');
+                legendElement.innerText = legend;
+                fieldset.appendChild(legendElement);
+                // If the property is an object, recursively create a form for it
+                input = createFormFromObject(obj[prop], prop);
+                input.setAttribute('id', prop);
+                input.setAttribute('name', prop);
+                form.appendChild(fieldset);
+                feldset.appendChild(label);
+                fieldset.appendChild(input);
+            } else {
+                input = document.createElement('input');
+                input.setAttribute('type', 'text');
+            }
+            input.setAttribute('id', prop);
+            input.setAttribute('name', prop);
             // If a fieldset element was created, append the label and input elements to it;
             // otherwise, append them to the form
             if (legend) {
-        p //feldset.appendChild(label);
+                //feldset.appendChild(label);
                 //fieldset.appendChild(input);
             } else {
                 form.appendChild(document.createElement('br'))
@@ -213,68 +243,9 @@
         }
     }
     return form;
-    }
+}
 const form = createFormFromObject(TCase);
 document.body.appendChild(form);
-
-*/
-
-    /*
-        if (typeof obj[prop] === 'object') {
-            const fieldset = document.createElement('fieldset');
-            const legendElement = document.createElement('legend');
-            legendElement.innerText = legend;
-            fieldset.appendChild(legendElement);
-            // If the property is an object, recursively create a form for it
-            input = createFormFromObject(obj[prop], prop);
-            input.setAttribute('id', prop);
-            input.setAttribute('name', prop);
-            form.appendChild(fieldset);
-                //    feldset.appendChild(label);
-                
-    */
-    function iterate(obj, stack) {
-        //      legendElement.innerText = legend;
-        
-
-        for (var prop in obj) {
-            if (obj.hasOwnProperty(prop)) {
-const label = document.createElement('label'); 
-form.appendChild(label);
-                if (typeof obj[prop] == "object") {
-                    // form.appendChild(document.createElement('br'))
-                    iterate(obj[prop], stack)
-                } else {
-                    label.setAttribute('for', prop);
-                    input = document.createElement('input');
-                        input.setAttribute('type', 'text');
-                    
-                            label.innerText = prop;
-
-                    input.setAttribute('id', prop);
-                    input.setAttribute('name', prop);
-                    
-    form.appendChild(label);
-                    form.appendChhild(input);
-                    }
-
-            }}
-
-
-
-   
-    
-    function createFormFromObject(obj, legend) {
-        // Create a form element
-        const form = document.createElement('form');
-        //  const fieldset = document.createElement('fieldset');
-        //   const legendElement = document.createElement('legend');
-        iterate(obj, "      ")
-        return form;
-    }
-    const form = createFormFromObject(TCase, 'legand');
-    document.body.appendChild(form);
-
 </script>
 
 
