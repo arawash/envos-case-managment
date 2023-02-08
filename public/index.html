@@ -220,7 +220,7 @@ const fieldset = document.createElement('fieldset');
 form.appendChild(legendElement);
 				form.appendChild(fieldset);		fieldset.appendChild(legendElement);
 					
-                createFormFromObject(prop);
+                createFormFromObject(obj[prop]);
             } else {
                 label = document.createElement('label');
                 label.setAttribute('for', prop);
