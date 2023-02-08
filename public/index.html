@@ -186,42 +186,48 @@
     };
     /*  */
     
-
 function createFormFromObject(obj, legend) {
     // Create a form element
     const form = document.createElement('form');
     // If a legend was provided, create a fieldset element and append the legend
-   
-	for (const prop in obj) {
-		
-		 if (obj.hasOwnProperty(prop)) {
-			   if (typeof obj[prop] === 'object') {
-				   
-			   createFormFromObject(obj[prop], prop);}
-			   else{
-				
-				label = document.createElement('label');
-label.setAttribute('for', prop);
-label.innerText = prop;
-				input = document.createElement('input');
-				
-				 if (typeof obj[prop] === 'boolean') {
+    function creatlabletype(obj ,prop) {
+        if (typeof obj[prop] === 'boolean') {
+            input.setAttribute('type', 'checkbox');
+        } else
+            if (typeof obj[prop] === 'number') {
 
-                            
-                            input.setAttribute('type', 'checkbox');
-                        } else
-                            if (typeof obj[prop] === 'number') {
-                        
-                            input.setAttribute('type', 'number');
-                        } else
-                            if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
-                            
-                            input.setAttribute('type', 'date');
-                        } else {
-                         
-				 input.setAttribute('type', 'text');
-                        }
-				input.setAttribute('id', prop);
+            input.setAttribute('type', 'number');
+        } else
+            if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+
+            input.setAttribute('type', 'date');
+        } else {
+
+            input.setAttribute('type', 'text');
+        }
+    }
+    for (const prop in obj) {
+
+        if (obj.hasOwnProperty(prop)) {
+            if (typeof obj[prop] === 'object') {
+const fieldset = document.createElement('fieldset');
+
+			const legendElement = document.createElement('legend')
+			;
+			    fieldset.setAttribute('for', 'c');
+			    
+			    legendElement.innerText = prop;
+
+						fieldset.appendChild(legendElement);
+					
+                createFormFromObject(obj[prop], prop);
+            } else {
+                label = document.createElement('label');
+                label.setAttribute('for', prop);
+                label.innerText = prop;
+                input = document.createElement('input');
+                creatlabletype(obj[prop]);
+                input.setAttribute('id', prop);
                 input.setAttribute('name', prop);
                 form.appendChild(document.createElement('br'))
                 form.appendChild(label);
@@ -233,7 +239,6 @@ label.innerText = prop;
 }
 const form = createFormFromObject(TCase);
 document.body.appendChild(form);
-document.body.BasicExample.appendChild(form);
 
   </script>
 </html>
