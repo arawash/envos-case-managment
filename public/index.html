@@ -217,8 +217,8 @@ const fieldset = document.createElement('fieldset');
 			    fieldset.setAttribute('for', 'c');
 			    
 			    legendElement.innerText = prop;
-
-						fieldset.appendChild(legendElement);
+form.appendChild(legendElement);
+				form.appendChild(fieldset);		fieldset.appendChild(legendElement);
 					
                 createFormFromObject(obj[prop], prop);
             } else {
