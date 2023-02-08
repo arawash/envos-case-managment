@@ -222,8 +222,10 @@ function createFormFromObject(obj, legend) {
                 fieldset.appendChild(legendElement);
 form.appendChild(document.createElement('hr'))
 console.log(obj[prop])
-                createFormFromObject(obj[prop]);
-            } else {
+               Part = createFormFromObject(obj[prop]);
+           
+fieldset.appendChild(part);
+ } else {
                 label = document.createElement('label');
                 label.setAttribute('for', prop);
                 label.innerText = prop;
