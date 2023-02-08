@@ -185,42 +185,53 @@
       isUserIdRepresentedByPrivatePractitioner: "ANY",
     };
     /*  */
-    function createFormFromObject(obj) {
-      // Create a form element
-      const form = document.createElement("form");
-      // If a legend was provided, create a fieldset element and append the legend
-      // Iterate through the properties of the object
-      for (const prop in obj) {
-        // Ignore inherited properties
-        if (obj.hasOwnProperty(prop)) {
-          // Create a label element
-          
-          if (typeof obj[prop] === "object") {
-            // const fieldset = document.createElement('fieldset');
-            //  const legendElement = document.createElement('legend');
-            //  legendElement.innerText = legend;
-            // fieldset.appendChild(legendElement);
-            // If the property is an object, recursively create a form for it
-            createFormFromObject(obj[prop], prop);
-          } else
- {
-    const label = document.createElement("label");
-              label.setAttribute("for", prop);
-                        label.innerText = prop;
-                                  // Create an input element based on the data type of the property let input;
-                                  
-            input = document.createElement("input");
-            input.setAttribute("type", "text");
-            input.setAttribute("id", prop);
-            input.setAttribute("name", prop);
-            form.appendChild(label);
-            form.appendChild(input);
-          }
+    
+
+function createFormFromObject(obj, legend) {
+    // Create a form element
+    const form = document.createElement('form');
+    // If a legend was provided, create a fieldset element and append the legend
+   
+	for (const prop in obj) {
+		
+		 if (obj.hasOwnProperty(prop)) {
+			   if (typeof obj[prop] === 'object') {
+				   
+			   createFormFromObject(obj[prop], prop);}
+			   else{
+				
+				label = document.createElement('label');
+label.setAttribute('for', prop);
+label.innerText = prop;
+				input = document.createElement('input');
+				
+				 if (typeof obj[prop] === 'boolean') {
+
+                            
+                            input.setAttribute('type', 'checkbox');
+                        } else
+                            if (typeof obj[prop] === 'number') {
+                        
+                            input.setAttribute('type', 'number');
+                        } else
+                            if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+                            
+                            input.setAttribute('type', 'date');
+                        } else {
+                         
+				 input.setAttribute('type', 'text');
+                        }
+				input.setAttribute('id', prop);
+                input.setAttribute('name', prop);
+                form.appendChild(document.createElement('br'))
+                form.appendChild(label);
+                form.appendChild(input);
+            }
         }
-      }
-      return form;
     }
-    const form = createFormFromObject(TCase);
-    document.body.appendChild(form);
+    return form;
+}
+const form = createFormFromObject(TCase);
+document.body.appendChild(form);
   </script>
 </html>
