@@ -210,17 +210,18 @@ function createFormFromObject(obj, legend) {
 
         if (obj.hasOwnProperty(prop)) {
             if (typeof obj[prop] === 'object') {
-const fieldset = document.createElement('fieldset');
+                const fieldset = document.createElement('fieldset');
 
-			const legendElement = document.createElement('legend')
-			;
-			    fieldset.setAttribute('for', 'c');
-			    
-			    legendElement.innerText = prop;
-form.appendChild(legendElement);
-				form.appendChild(fieldset);		fieldset.appendChild(legendElement);
-					
-                createFormFromObject(obj[prop]);
+                const legendElement = document.createElement('legend');
+                fieldset.setAttribute('for', 'c');
+
+                legendElement.innerText = prop;
+                form.appendChild(legendElement);
+                form.appendChild(fieldset); 
+                fieldset.appendChild(legendElement);
+form.appendChild(document.createElement('hr'))
+k = structuredClone(prop);
+                createFormFromObject(k);
             } else {
                 label = document.createElement('label');
                 label.setAttribute('for', prop);
@@ -235,12 +236,14 @@ form.appendChild(legendElement);
             }
         }
     }
-form.appendChild(document.createElement('hr'))
-               
+    form.appendChild(document.createElement('hr'))
+
     return form;
 }
 const form = createFormFromObject(TCase);
 document.body.appendChild(form);
+
+
 
   </script>
 </html>
