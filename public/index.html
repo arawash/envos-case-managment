@@ -186,9 +186,10 @@
     };
     /*  */
     
+const form = document.createElement('form');
 function createFormFromObject(obj, legend) {
     // Create a form element
-    const form = document.createElement('form');
+    
     // If a legend was provided, create a fieldset element and append the legend
     function creatlabletype(obj ,prop) {
         if (typeof obj[prop] === 'boolean') {
@@ -220,8 +221,8 @@ function createFormFromObject(obj, legend) {
                 form.appendChild(fieldset); 
                 fieldset.appendChild(legendElement);
 form.appendChild(document.createElement('hr'))
-k = structuredClone(prop);
-                createFormFromObject(k);
+console.log(obj[prop])
+                createFormFromObject(obj[prop]);
             } else {
                 label = document.createElement('label');
                 label.setAttribute('for', prop);
