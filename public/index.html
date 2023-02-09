@@ -189,7 +189,7 @@
 const form = document.createElement('form');
 function createFormFromObject(obj, legend) {
     // Create a form element
-    
+
     // If a legend was provided, create a fieldset element and append the legend
     function creatlabletype(obj ,prop) {
         if (typeof obj[prop] === 'boolean') {
@@ -207,25 +207,42 @@ function createFormFromObject(obj, legend) {
             input.setAttribute('type', 'text');
         }
     }
+
+    function createfieldset(prop) {
+        const fieldset = document.createElement('fieldset');
+        const legendElement = document.createElement('legend');
+        fieldset.setAttribute('for', prop);
+
+        legendElement.innerText = prop;
+        fieldset.appendChild(legendElement)
+        form.appendChild(legendElement);
+        form.appendChild(fieldset);
+        //fieldset.appendChild(legendElement);
+        form.appendChild(document.createElement('hr'))
+        console.log(obj[prop]);
+        console.log(obj);
+        console.log(prop);
+    }
     for (const prop in obj) {
 
         if (obj.hasOwnProperty(prop)) {
             if (typeof obj[prop] === 'object') {
-                const fieldset = document.createElement('fieldset');
+               // document.createElement('fieldset')
+                createfieldset(prop ,obj[prop]);
 
-                const legendElement = document.createElement('legend');
-                fieldset.setAttribute('for', obj[prop]);
+                createFormFromObject(prop);
+                /*
 
-                legendElement.innerText = prop;
-                form.appendChild(legendElement);
-                form.appendChild(fieldset); 
-                fieldset.appendChild(legendElement);
-form.appendChild(document.createElement('hr'))
-console.log(obj[prop]);
-            let Part = createFormFromObject(obj[prop]);
-           
-fieldset.appendChild(part(obj[prop]));
- } else {
+                function Part(obj[prop]) {
+                    createFormFromObject(obj[prop]);
+                }
+                */
+                document.createElement('hr');
+
+
+
+
+            } else {
                 label = document.createElement('label');
                 label.setAttribute('for', prop);
                 label.innerText = prop;
