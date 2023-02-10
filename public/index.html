@@ -43,57 +43,18 @@
     -->
   </body>
   <script>
-    const node = document.createElement("li");
-    const textnode = document.createTextNode("Water");
-    node.appendChild(textnode);
-
-    document.body.appendChild(node).innerHTML = "Hello JavaScript!";
-
-    let DocketEntry = {
-      additionalInfo: "string",
-      addToCoversheet: true,
-      caseCaption: "string",
-      certificateOfService: "string",
-      createdAt: "string",
-      descriptionDisplay: "string",
-      docketEntryId: "string",
-      docketNumber: "string",
-      documentTitle: "string",
-      documentconst: "string",
-      eventCode: "string",
-      filedBy: "string",
-      filingDate: "string",
-      index: Number,
-      isFileAttached: true,
-      isPaper: "string",
-      lodged: true,
-      mailingDate: "string",
-      otherFilingParty: "string",
-      editState: {
-        object: "object",
-      },
-      isLegacyServed: true,
-      processingStatus: "string",
-      pk: "string",
-      receivedAt: "string",
-      sentBy: "string",
-      servedAt: "string",
-      sk: "string",
-      userId: "string",
-    };
-
-    let TCase = {
-      associatedJudge: "string",
-      automaticBlocked: "string",
-      automaticBlockedDate: "string",
-      automaticBlockedReason: "string",
-      blocked: "string",
-      isSealed: true,
-      blockedDate: "string",
-      blockedReason: "string",
-      docketEntries: {
+let TCase = {
+    associatedJudge: "string",
+    automaticBlocked: "string",
+    automaticBlockedDate: "string",
+    automaticBlockedReason: "string",
+    blocked: "string",
+    isSealed: 'true',
+    blockedDate: "string",
+    blockedReason: "string",
+    docketEntries: {
         additionalInfo: "string",
-        addToCoversheet: true,
+        addToCoversheet: 'true',
         caseCaption: "string",
         certificateOfService: "string",
         createdAt: "string",
@@ -105,164 +66,188 @@
         eventCode: "string",
         filedBy: "string",
         filingDate: "string",
-        index: Number,
-        isFileAttached: true,
+        index: 'Number',
+        isFileAttached: 'true',
         isPaper: "string",
-        lodged: true,
+        lodged: 'true',
         mailingDate: "string",
         otherFilingParty: "string",
         editState: {
-          object: "object",
+            object: "object"
         },
-        isLegacyServed: true,
+        isLegacyServed: 'true',
         processingStatus: "string",
         pk: "string",
         receivedAt: "string",
         sentBy: "string",
         servedAt: "string",
         sk: "string",
-        userId: "string",
-      },
-      // [],
-      canAllowDocumentService: "string",
-      caseTitle: "string",
-      canAllowPrintableDocketRecord: "string",
-      caseCaption: "string",
-      caseNote: "string",
-      caseconst: "string",
-      closedDate: "string",
-      hearings: {
+        userId: "string"
+    },
+    // [],
+    canAllowDocumentService: "string",
+    caseTitle: "string",
+    canAllowPrintableDocketRecord: "string",
+    caseCaption: "string",
+    caseNote: "string",
+    caseconst: "string",
+    closedDate: "string",
+
+    hearings: {
         trialSessionId: "string",
-      },
-      // l[],
-      createdAt: "string",
-      damages: "string",
-      docketNumber: "string",
-      docketNumberSuffix: "string",
-      docketNumberWithSuffix: "string",
-      entityName: "string",
-      filingconst: "string",
-      hasPendingItems: true,
-      hasVerifiedIrsNotice: "string",
-      highPriority: "string",
-      highPriorityReason: "string",
-      initialCaption: "string",
-      initialDocketNumberSuffix: "string",
-      irsNoticeDate: "string",
-      isPaper: "string",
-      judgeUserId: "string",
-      leadDocketNumber: "string",
-      litigationCosts: "string",
-      mailingDate: "string",
-      noticeOfAttachments: "string",
-      noticeOfTrialDate: "string",
-      orderDesignatingPlaceOfTrial: true,
-      orderForAmendedPetition: true,
-      orderForAmendedPetitionAndFilingFee: true,
-      orderForFilingFee: true,
-      orderForOds: true,
-      orderForRatification: true,
-      orderToShowCause: true,
-      partyconst: "string",
-      petitionPaymentDate: "string",
-      petitionPaymentMethod: "string",
-      petitionPaymentStatus: "string",
-      petitionPaymentWaivedDate: "string",
-      preferredTrialCity: "string",
-      procedureconst: "string",
-      qcCompleteForTrial: "string",
-      receivedAt: "string",
-      sealedDate: "string",
-      sortableDocketNumber: "string",
-      status: "string",
-      trialDate: "string",
-      trialLocation: "string",
-      trialSessionId: "string",
-      trialTime: "string",
-      useSameAsPrimary: "string",
-      //petitioners: TPetitioner,
-      // [],
-      isUserIdRepresentedByPrivatePractitioner: "ANY",
-    };
-    /*  */
-    
+    },
+    // l[],
+    createdAt: "string",
+    damages: "string",
+    docketNumber: "string",
+    docketNumberSuffix: "string",
+    docketNumberWithSuffix: "string",
+    entityName: "string",
+    filingconst: "string",
+    hasPendingItems: 'true',
+    hasVerifiedIrsNotice: "string",
+    highPriority: "string",
+    highPriorityReason: "string",
+    initialCaption: "string",
+    initialDocketNumberSuffix: "string",
+    irsNoticeDate: "string",
+    isPaper: "string",
+    judgeUserId: "string",
+    leadDocketNumber: "string",
+    litigationCosts: "string",
+    mailingDate: "string",
+    noticeOfAttachments: "string",
+    noticeOfTrialDate: "string",
+    orderDesignatingPlaceOfTrial: 'true',
+    orderForAmendedPetition: 'true',
+    orderForAmendedPetitionAndFilingFee: 'true',
+    orderForFilingFee: 'true',
+    orderForOds: 'true',
+    orderForRatification: 'true',
+    orderToShowCause: 'true',
+    partyconst: "string",
+    petitionPaymentDate: "string",
+    petitionPaymentMethod: "string",
+    petitionPaymentStatus: "string",
+    petitionPaymentWaivedDate: "string",
+    preferredTrialCity: "string",
+    procedureconst: "string",
+    qcCompleteForTrial: "string",
+    receivedAt: "string",
+    sealedDate: "string",
+    sortableDocketNumber: "string",
+    status: "string",
+    trialDate: "string",
+    trialLocation: "string",
+    trialSessionId: "string",
+    trialTime: "string",
+    useSameAsPrimary: "string",
+    //petitioners: TPetitioner,
+    // [],
+    isUserIdRepresentedByPrivatePractitioner: "ANY"
+}
+
+
+/*
+const object = {a:2, b:4, c:6, d:8};
+
+
+
+for (const [index, [key, value]] of Object.entries(Object.entries(TCase))) {
+  console.log(`${index}: ${key} = ${value}`);
+}
+
+Object.entries(object).forEach(([key, q], index) => {
+  console.log(`${index}: ${key} = ${value}`);
+});
+
+*/
+
+
+
+
 const form = document.createElement('form');
-function createFormFromObject(obj, legend) {
-    // Create a form element
 
-    // If a legend was provided, create a fieldset element and append the legend
-    function creatlabletype(obj ,prop) {
-        if (typeof obj[prop] === 'boolean') {
-            input.setAttribute('type', 'checkbox');
-        } else
-            if (typeof obj[prop] === 'number') {
 
-            input.setAttribute('type', 'number');
-        } else
-            if (typeof obj[prop] === 'string' && obj[prop].startsWith('Date')) {
+function x(object) {
+    
+    Object.entries(object)
+    .forEach(([key, value], index) => {
+        if (object.hasOwnProperty(key)) {
+            if (typeof value === 'object') {
+                x(value);
+                // console.log(xy)
+                // x(value);
+                if (typeof object[key] === 'object') {
+                    // document.createElement('fieldset')
+                    //   let temp = obj[key;
+                    function createfieldset(key) {
 
-            input.setAttribute('type', 'date');
-        } else {
+                        console.log('fieldset' + key)
+                        const fieldset = document.createElement('fieldset');
+                        const legendElement = document.createElement('legend');
+                        fieldset.setAttribute('for', key);
 
-            input.setAttribute('type', 'text');
-        }
-    }
+                        legendElement.innerText = key;
+                        fieldset.appendChild(legendElement)
+                        form.appendChild(legendElement);
+                        form.appendChild(fieldset);
+                        //fieldset.appendChild(legendElement);
+                        form.appendChild(document.createElement('hr'))
+                        /*   console.log(object[key]);
+                    console.log(obj);*/
 
-    function createfieldset(prop) {
-        const fieldset = document.createElement('fieldset');
-        const legendElement = document.createElement('legend');
-        fieldset.setAttribute('for', prop);
+                        console.log(key +' creat field');
+                    }
+                    createfieldset(key, object[key]);
+                    x(value)//(key);
+                    document.createElement('hr');
+                } else {
 
-        legendElement.innerText = prop;
-        fieldset.appendChild(legendElement)
-        form.appendChild(legendElement);
-        form.appendChild(fieldset);
-        //fieldset.appendChild(legendElement);
-        form.appendChild(document.createElement('hr'))
-        console.log(obj[prop]);
-        console.log(obj);
-        console.log(prop);
-    }
-    for (const prop in obj) {
+                    console.log(/*Object.key(object) +*/ ` ${index} : ${key}: ${value}  `);
+                    console.log(key[value])
+                    function createlable() {
+                        console.log('creat lable ' + key)
+                        label = document.createElement('label');
+                        label.setAttribute('for', key);
+                        label.innerText = key
+                    }
+                    createlable();
+                    input = document.createElement('input');
+                    function creatlabletype(obj ,key) {
+                        if (typeof object[key] === 'boolean') {
+                            input.setAttribute('type', 'checkbox');
+                        } else
+                            if (typeof object[key] === 'number') {
 
-        if (obj.hasOwnProperty(prop)) {
-            if (typeof obj[prop] === 'object') {
-               // document.createElement('fieldset')
-                createfieldset(prop ,obj[prop]);
+                            input.setAttribute('type', 'number');
+                        } else
+                            if (typeof object[key] === 'string' && object[key].startsWith('Date')) {
 
-                createFormFromObject(prop);
-                /*
+                            input.setAttribute('type', 'date');
+                        } else {
 
-                function Part(obj[prop]) {
-                    createFormFromObject(obj[prop]);
+                            input.setAttribute('type', 'text');
+                        }
+                    }
+                    creatlabletype(object[key]);
+                    input.setAttribute('id', key);
+                    input.setAttribute('name', key);
+                    form.appendChild(document.createElement('br'))
+                    form.appendChild(label);
+                    form.appendChild(input);
                 }
-                */
-                document.createElement('hr');
-
-
-
-
-            } else {
-                label = document.createElement('label');
-                label.setAttribute('for', prop);
-                label.innerText = prop;
-                input = document.createElement('input');
-                creatlabletype(obj[prop]);
-                input.setAttribute('id', prop);
-                input.setAttribute('name', prop);
-                form.appendChild(document.createElement('br'))
-                form.appendChild(label);
-                form.appendChild(input);
             }
-        }
-    }
-    form.appendChild(document.createElement('hr'))
 
+        }
+
+
+    })
     return form;
 }
-const returnedForm = createFormFromObject(TCase);
-document.body.appendChild(returnedForm);
-
+    const returnedForm = x(TCase);
+   
+    document.body.appendChild(returnedForm);
 
 
   </script>
