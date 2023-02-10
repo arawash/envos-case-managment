@@ -165,17 +165,16 @@ Object.entries(object).forEach(([key, q], index) => {
 
 
 
-
 const form = document.createElement('form');
 
 
 function x(object) {
-    
+
     Object.entries(object)
     .forEach(([key, value], index) => {
         if (object.hasOwnProperty(key)) {
-            if (typeof value === 'object') {
-                x(value);
+           
+              //  x(value);
                 // console.log(xy)
                 // x(value);
                 if (typeof object[key] === 'object') {
@@ -183,7 +182,7 @@ function x(object) {
                     //   let temp = obj[key;
                     function createfieldset(key) {
 
-                        console.log('fieldset' + key)
+                        console.log('fieldset cal👍' + key)
                         const fieldset = document.createElement('fieldset');
                         const legendElement = document.createElement('legend');
                         fieldset.setAttribute('for', key);
@@ -206,13 +205,13 @@ function x(object) {
 
                     console.log(/*Object.key(object) +*/ ` ${index} : ${key}: ${value}  `);
                     console.log(key[value])
-                    function createlable() {
+                    function createlable(key) {
                         console.log('creat lable ' + key)
                         label = document.createElement('label');
                         label.setAttribute('for', key);
                         label.innerText = key
                     }
-                    createlable();
+                    createlable(key);
                     input = document.createElement('input');
                     function creatlabletype(obj ,key) {
                         if (typeof object[key] === 'boolean') {
@@ -239,15 +238,17 @@ function x(object) {
                 }
             }
 
-        }
+       
 
 
     })
     return form;
 }
-    const returnedForm = x(TCase);
-   
-    document.body.appendChild(returnedForm);
+const returnedForm = x(TCase);
+
+document.body.appendChild(returnedForm);
+
+
 
 
   </script>
