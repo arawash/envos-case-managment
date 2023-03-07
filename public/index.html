@@ -1,50 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+    name="description"
+    content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+          manifest.json provides metadata used when your web app is installed on a
+          user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+          Notice the use of %PUBLIC_URL% in the tags above.
+          It will be replaced with the URL of the `public` folder during the build.
+          Only files inside the `public` folder can be referenced from the HTML.
+          Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+          work correctly both with client-side routing and a non-root public URL.
+          Learn how to configure a non-root public URL by running `npm run build`.
+        -->
     <title>React App</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body>
- tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-  <script>
+          This HTML file is a template.
+          If you open it directly in the browser, you will see an empty page.
+          You can add webfonts, meta tags, or analytics to this file.
+          The build step will place the bundled scripts into the <body>
+     tag.
+          To begin the development, run `npm start` or `yarn start`.
+          To create a production bundle, use `npm run build` or `yarn build`.
+        -->
+</body>
+<script>
 
 
-  </script>
-        <script src='src/js.js'  type='module'></script>
+</script>
+<script src='src/js.js' type='module'></script>
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+    name="description"
+    content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+          manifest.json provides metadata used when your web app is installed on a
+          user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+          Notice the use of %PUBLIC_URL% in the tags above.
+          It will be replaced with the URL of the `public` folder during the build.
+          Only files inside the `public` folder can be referenced from the HTML.
+          Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+          work correctly both with client-side routing and a non-root public URL.
+          Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+    <title>React App</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+          This HTML file is a template.
+          If you open it directly in the browser, you will see an empty page.
+          You can add webfonts, meta tags, or analytics to this file.
+          The build step will place the bundled scripts into the <body>
+     tag.
+          To begin the development, run `npm start` or `yarn start`.
+          To create a production bundle, use `npm run build` or `yarn build`.
+        -->
+</body>
+<script>
+
+
+    "use strict";
+    export let nativobject = {
+        associatedJudge: Date(),
+        docketEntries: {
+            additionalInfo: "string",
+            addToCoversheet: true,
+            caseCaption: "string",
+            certificateOfService: "string",
+            createdAt: "string",
+            descriptionDisplay: "string",
+            docketEntryId: 1,
+            docketNumber: 1,
+            documentTitle: "string",
+            documentconst: "string",
+            eventCode: "string",
+            filedBy: "string",
+            filingDate: "string",
+            index: 1,
+            isFileAttached: true,
+            isPaper: "string",
+            lodged: true,
+            mailingDate: "string",
+            otherFilingParty: "string",
+            editState: {
+                object: "object",
+            },
+            isLegacyServed: true,
+            processingStatus: "string",
+            pk: "string",
+            receivedAt: "string",
+            sentBy: "string",
+            servedAt: "string",
+            sk: "string",
+            userId: 1,
+        },
+        automaticBlocked: "string",
+        automaticBlockedDate: "string",
+        automaticBlockedReason: "string",
+        blocked: "string",
+        isSealed: true,
+        blockedDate: "string",
+        blockedReason: "string",
+        // [],
+        canAllowDocumentService: "string",
+        caseTitle: "string",
+        canAllowPrintableDocketRecord: "string",
+        caseCaption: "string",
+        caseNote: "string",
+        caseconst: "string",
+        closedDate: "string",
+
+        hearings: {
+            trialSessionId: "string",
+        },
+        // l[],
+        createdAt: "string",
+        damages: "string",
+        docketNumber: "string",
+        docketNumberSuffix: "string",
+        docketNumberWithSuffix: "string",
+        entityName: "string",
+        filingconst: "string",
+        hasPendingItems: true,
+        hasVerifiedIrsNotice: "string",
+        highPriority: "string",
+        highPriorityReason: "string",
+        initialCaption: "string",
+        initialDocketNumberSuffix: "string",
+        irsNoticeDate: "string",
+        isPaper: "string",
+        judgeUserId: "string",
+        leadDocketNumber: "string",
+        litigationCosts: "string",
+        mailingDate: "string",
+        noticeOfAttachments: "string",
+        noticeOfTrialDate: "string",
+        orderDesignatingPlaceOfTrial: true,
+        orderForAmendedPetition: true,
+        orderForAmendedPetitionAndFilingFee: true,
+        orderForFilingFee: true,
+        orderForOds: true,
+        orderForRatification: true,
+        orderToShowCause: true,
+        partyconst: "string",
+        petitionPaymentDate: "string",
+        petitionPaymentMethod: "string",
+        petitionPaymentStatus: "string",
+        petitionPaymentWaivedDate: "string",
+        preferredTrialCity: "string",
+        procedureconst: "string",
+        qcCompleteForTrial: "string",
+        receivedAt: "string",
+        sealedDate: "string",
+        sortableDocketNumber: "string",
+        status: "string",
+        trialDate: "string",
+        trialLocation: "string",
+        trialSessionId: "string",
+        trialTime: "string",
+        useSameAsPrimary: "string",
+        //petitioners: TPetitioner,
+        // [],
+        isUserIdRepresentedByPrivatePractitioner: "ANY",
+    };
+    /* export function object(nativobject) {
+    let object = nativobject;
+    return object;
+}
+ */
+
+/*
+    "use strict"
+
+    import {
+        nativobject
+    } from "./object.js"
+
+*/
+
+
+    let form = document.createElement("form");
+
+
+
+    function mapFactore(object) {
+        let item = new Map(Object.entries(object))
+        item.forEach((key, value) => {
+            // item.set(key, value)
+            console.table(key)
+            console.table(value)
+        })
+        //  }
+        // )
+        console.log(item)
+        return item
+    }
+    mapFactore(nativobject)
+
+    function loopOverTranformedObject(object) {
+        object.forEach((key, value) => {
+            // console.log(value)
+            //  console.log(value[1])
+            //  console.log(value)
+
+            if (typeof key === "object") {
+                //  loging(value, , index )
+                loopOverTranformedObject(mapFactore(key));
+            } else {
+
+                let label = document.createElement("label");
+
+
+                let input = document.createElement("input");
+                let createlable = function () {
+                    label.setAttribute("for", value)
+                    label.innerText = value
+                }
+                let createinput = function () {
+                    let input = document.createElement("input")
+
+
+                    input.setAttribute("id", value)
+                    input.setAttribute("name", value)
+                    input.setAttribute("placeholder", value)
+                    // createType(prpo);
+                }
+                // let createType = function () {
+                if (typeof key === "boolean") {
+                    input.setAttribute("type", "checkbox")
+                } else if (typeof key === "number") {
+                    input.setAttribute("type", "number")
+                } else if (typeof key === "string" && value.startsWith("Date")) {
+                    input.setAttribute("type", "date")
+                } else if (typeof key === "string" && value.endsWith("At")) {
+                    input.setAttribute("type", "date")
+                } else if (typeof key === "string" && value.endsWith("Date")) {
+                    input.setAttribute("type", "date")
+                } else {
+                    input.setAttribute("type", "text")
+                }
+                // }
+                createlable()
+                createinput()
+                // createType()
+                form.appendChild(label)
+                form.appendChild(input)
+            }
+        })
+    }
+
+    loopOverTranformedObject(mapFactore(nativobject))
+
+
+    document.body.appendChild(form)
+
+
+    console.log(
+        //  toString
+        (form))
+</script>
 </html>
