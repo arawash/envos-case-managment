@@ -2,7 +2,7 @@
 
 import {
     nativobject
-} from "./object.js"
+} from "./src/object.js"
 
 
 
